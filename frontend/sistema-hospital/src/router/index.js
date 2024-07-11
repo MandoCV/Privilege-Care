@@ -9,6 +9,11 @@ import EstudioView from '@/components/estudio.vue'
 import TablaResutadoEstudioView from '@/components/tablaResultadoEstudio.vue'
 import TablaEstudiosView from '@/components/tablaEstudios.vue'
 import PiePaginaView from '@/components/pie-pagina.vue'
+
+import citasLista from '../components/registrosM/citas.vue'
+import expedientes from '../components/registrosM/expedientesM.vue'
+import recetaMedica from '../components/registrosM/recetaMedica.vue'
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -60,7 +65,11 @@ const router = createRouter({
      path: '/pie-pagina',
      name: 'piePagina',
      component: PiePaginaView
-   }]
+   },
+   {path:'/citas', name:'citasLista', component:citasLista},
+   {path:'/expediente', name:'expediente', component:expedientes},
+   {path:'/receta', name:'receta', component: recetaMedica }
+  ]
     }
   
    
