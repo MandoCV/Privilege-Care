@@ -9,6 +9,12 @@ import EstudioView from '@/components/estudio.vue'
 import TablaResutadoEstudioView from '@/components/tablaResultadoEstudio.vue'
 import TablaEstudiosView from '@/components/tablaEstudios.vue'
 import PiePaginaView from '@/components/pie-pagina.vue'
+
+// Seccion de Solicitudes
+import RegistroSolicitudes from '@/components/Comite-Transplantes/RegistroSolicitudes.vue'
+import TablaSolicitudes from '@/components/Comite-Transplantes/Tabla-Solicitudes.vue'
+import UpdateSolucitud from '@/components/Comite-Transplantes/Update-Solucitud.vue'
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -26,45 +32,61 @@ const router = createRouter({
       path: '/dashboard',
       name: 'dashboard',
       component: DashboardView,
-      children:[{
+      children: [{
         path: '/personas',
         name: 'personas',
-        component: PersonasView 
+        component: PersonasView
       },
       {
         path: '/usuario',
         name: 'usuario',
-        component: UsuarioView 
+        component: UsuarioView
       },
       {
         path: '/resultadosEstudio',
         name: 'resultadosEstudio',
-        component: ResultadosEstudioView 
+        component: ResultadosEstudioView
       },
       {
         path: '/tablaResultadoEstudio',
         name: 'tablaResultadoEstudio',
-        component: TablaResutadoEstudioView 
+        component: TablaResutadoEstudioView
       },
       {
-       path: '/estudio',
-       name: 'estudio',
-       component: EstudioView
-     },
-     {
-      path: '/tablaEstudios',
-      name: 'tablaEstudios',
-      component: TablaEstudiosView
-    },
-    {
-     path: '/pie-pagina',
-     name: 'piePagina',
-     component: PiePaginaView
-   }]
+        path: '/estudio',
+        name: 'estudio',
+        component: EstudioView
+      },
+      {
+        path: '/tablaEstudios',
+        name: 'tablaEstudios',
+        component: TablaEstudiosView
+      },
+      // Seccion de Solicitudes
+      {
+        path: '/RegistroSolicitudes',
+        name: 'RegistroSolicitudes',
+        component: RegistroSolicitudes
+      },
+      {
+        path: '/TablaSolicitudes',
+        name: 'TablaSolicitudes',
+        component: TablaSolicitudes
+      },
+      {
+        path: '/UpdateSolicitudes',
+        name: 'UpdateSolicitudes',
+        component: UpdateSolucitud
+      },
+      {
+        path: '/pie-pagina',
+        name: 'piePagina',
+        component: PiePaginaView
+      }]
     }
-  
-   
-    
+
+
+
   ]
 })
 
